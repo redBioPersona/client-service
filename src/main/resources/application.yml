@@ -1,0 +1,4 @@
+server:
+  port: 8081
+
+urlClient: http://localhost:8085/persistence/getClientesDisponibles
