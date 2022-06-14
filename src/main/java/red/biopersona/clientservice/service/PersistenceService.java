@@ -43,7 +43,7 @@ public class PersistenceService implements IPersistenceService{
 			ResponseEntity<ResponseClientesDisponiblesDTO[]> response = oauthServerTemplate.getForEntity(
 					urlClient,
 					ResponseClientesDisponiblesDTO[].class);
-			log.info("getClientesDisponibles "+response.getStatusCode().value()+" response "+response.getBody().toString());
+			log.info("getClientesDisponibles "+response.getStatusCode().value());
 			return response.getBody();
 		} catch (HttpClientErrorException | HttpServerErrorException ex) {
 			log.error("Error contacting with oauth server", ex);

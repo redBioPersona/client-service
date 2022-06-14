@@ -21,7 +21,7 @@ public class ScheduledTasks {
 
 	private static final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
 
-	@Scheduled(fixedDelay = 360000, initialDelay = 1000)
+	@Scheduled(fixedDelay = 3600000, initialDelay = 1000)
 	public void reportCurrentTime() {
 		log.info("The time, consuming clients: {}", dateFormat.format(new Date()));
 		clientesService.getClientesDisponibles();
