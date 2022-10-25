@@ -16,7 +16,7 @@ public class ResponseClientesDisponiblesDTO implements Serializable {
     private static final long serialVersionUID = 1L;
 
 	
-	private String llave;
+	private String key;
 	private String companyName;
 	private String direccion;
 	private Object logo;

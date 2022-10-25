@@ -28,11 +28,11 @@ public class ClientController{
 	IClientesService clientesService;
 	
 	
-	@PostMapping(value = "/existeCliente", produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<?> existeCliente(@RequestParam String client) throws CollectionsServiceException  {
+	@PostMapping(value = "/existsClient", produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<?> existeCliente(@RequestParam String key) throws CollectionsServiceException  {
 		HttpStatus code = HttpStatus.OK;
-		boolean resul=clientesService.canOperateTheClient(client);
-		log.info("validando si existe el cliente "+client+"?="+resul);
+		boolean resul=clientesService.canOperateTheClient(key);
+		log.info("validando si existe el cliente "+key+"?="+resul);
 		return new ResponseEntity<>(resul, code);
 	}
 }

@@ -30,7 +30,7 @@ public class ClientesService implements IClientesService {
 	 */
 	public boolean canOperateTheClient(String client) throws CollectionsServiceException {
 		boolean res=false;
-		res=clientesDisponiblesL.stream().anyMatch(x->x.getLlave().equals(client));
+		res=clientesDisponiblesL.stream().anyMatch(x->x.getKey().equals(client));
 		log.info("Buscando al cliente "+client+" se encontro?"+res);
 		return res;
 	}
@@ -46,7 +46,7 @@ public class ClientesService implements IClientesService {
 			log.info("clientes, disponibles "+clientesDisponiblesL.size());
 			if(!clientesDisponiblesL.isEmpty()) {
 				clientesDisponiblesL.forEach(x->{
-					log.info(x.getLlave());
+					log.info("Data client "+x.getKey());
 				});
 			}
 		}
